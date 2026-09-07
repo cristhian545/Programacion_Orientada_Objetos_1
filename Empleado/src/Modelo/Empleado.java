@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Empleado {
+public abstract class Empleado {
     private String nombre, apellido;
     private int edad, rut;
 
@@ -46,5 +46,22 @@ public class Empleado {
         this.rut = rut;
     }
 
-    
+    @Override
+    public String toString() {
+        return "modelo.Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", rut=" + rut +
+                '}';
+    }
+
+    public void mostrarinfo(){
+        System.out.println("Nombre del empleado:" + nombre);
+        System.out.println("Apellido del empleado: " + apellido);
+        System.out.println("Edad del empleado: " + edad);
+        System.out.println("Rut del empleado: " + rut);
+
+    }
+
 }
