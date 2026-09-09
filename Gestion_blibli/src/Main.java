@@ -6,6 +6,7 @@ void main() {
     Biblioteca b= new Biblioteca();
     int op=0;
     Scanner sc= new Scanner(System.in);
+    Libro libro;
 
     do{
         System.out.println("Menú");
@@ -28,14 +29,16 @@ void main() {
 
 
                     libro = new Libro(titulo, autor, genero, anioPublicacion);
+                case 2:
+                    b.listar();
+                    break;
+
+
+                case 3:
+                    System.out.println("Chao vuelva pronto");
+                    break;
 
             }
-
-
-
-
-
-
 
         }
         catch (Exception e) {

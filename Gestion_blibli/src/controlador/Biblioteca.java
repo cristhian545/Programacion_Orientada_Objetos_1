@@ -14,6 +14,11 @@ public class Biblioteca {
 
     }
 
+    public void agregar(Libro libro){
+        listaLibros.add(libro);
+
+    }
+
     public Biblioteca(List<Libro> listaLibros) {
         this.listaLibros = listaLibros;
     }
@@ -26,9 +31,7 @@ public class Biblioteca {
         this.listaLibros = listaLibros;
     }
 
-    public void agregar(Libro libro){
-        listaLibros.add(libro);
-    }
+
 
     @Override
     public String toString() {
@@ -40,6 +43,9 @@ public class Biblioteca {
     public void listar(){
         System.out.println("******LIBROS******");
         for(Libro l : listaLibros);
+        System.out.println("Libro: "+ l.getNombre());
+        System.out.println("Libro: "+ l.getGenero());
+        System.out.println("----------------");
 
     }
 }
